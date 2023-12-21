@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "<h1>hola mundo</h1>";
 });
+
+Route::get('productos', [ProductoController::class, 'index']);
+
+Route::get('productos/create', [ProductoController::class, 'create']);
+
+Route::get('productos/{id?}', [ProductoController::class, 'show']);
+
+
+
+
+Route::resource('usuario', UsuarioController::class);
