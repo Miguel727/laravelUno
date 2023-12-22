@@ -20,10 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('productos', [ProductoController::class, 'index']);
-
 Route::get('productos/create', [ProductoController::class, 'create']);
-
-Route::get('productos/{id?}', [ProductoController::class, 'show']);
+Route::get('productos/{nombre?}', [ProductoController::class, 'show']);
+Route::post('productos', [ProductoController::class, 'store']);
+Route::get('productos/{id}/edit', [ProductoController::class, 'edit']);
+Route::put('productos/{id}', [ProductoController::class, 'update']);
+Route::delete('productos/{id}', [ProductoController::class, 'destroy']);
 
 
 

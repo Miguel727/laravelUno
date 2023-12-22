@@ -6,6 +6,6 @@
     <title>Detalle del producto</title>
 </head>
 <body>
-<h1>Detalle del producto</h1>
+<h1>Detalle del producto {{$producto}}</h1>
 </body>
 </html>
